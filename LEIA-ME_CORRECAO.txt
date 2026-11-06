@@ -1,0 +1,18 @@
+CORREÇÃO — SEGREDO DA INSULINA 21 DIAS
+
+Mudanças:
+1. index.html agora inicializa o aplicativo React. Antes, faltava a tag <script type="module">.
+2. /pagina/index.html mantém a mesma versão do aplicativo React.
+3. O script solicitado da UTMify (pixel-google.js, googlePixelId 6aec1d99e323ab0ac4d86bc4) foi mantido EXATAMENTE igual nos dois arquivos HTML, uma única vez em cada um.
+4. O script de UTMs (latest.js) foi mantido e antecipado no <head>; a CDN recebeu preconnect. Ambos carregam assincronamente, sem travar a página.
+5. Arquivos JavaScript antigos e cópias não usadas das imagens foram retirados para diminuir o pacote.
+6. Cache para estilos CSS versionados foi configurado no vercel.json.
+
+PUBLICAÇÃO
+- Envie o conteúdo desta pasta como diretório raiz do projeto na Vercel (ou a própria pasta como raiz do projeto).
+- Confira os endereços / e /pagina.
+- Verifique em DevTools > Network se o navegador consegue carregar /js/index-7562c9f413af.js e https://cdn.utmify.com.br/scripts/utms/latest.js e https://cdn.utmify.com.br/scripts/pixel/pixel-google.js.
+- Faça uma conversão de teste e valide os eventos no painel da UTMify/Google Ads. A presença do script não comprova, sozinha, atribuição de conversões.
+
+OBSERVAÇÃO
+Os scripts externos da UTMify dependem da conexão do visitante, do serviço de CDN e das configurações da conta de rastreamento. Este pacote não altera IDs de conta ou checkout.
