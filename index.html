@@ -177,7 +177,7 @@ body{
         </div>
     </div>
 
-    <a href="/pagina" class="cta-button" id="continuar-questionario">
+    <a href="/pagina/" class="cta-button" id="continuar-questionario">
         CONTINUAR AGORA
     </a>
 
@@ -199,13 +199,6 @@ body{
 
 </div>
 
-<script>
-// Mantém os parâmetros da campanha ao avançar da pré-venda para o questionário.
-(function () {
-  var button = document.getElementById('continuar-questionario');
-  if (!button) return;
-  button.href = '/pagina' + window.location.search;
-})();
-</script>
+<script src="/js/presell.js" defer></script>
 </body>
 </html>
