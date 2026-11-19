@@ -1,0 +1,9 @@
+
+/* Rodapé institucional, separado dos estilos do quiz e da pre-sell */
+.site-institutional-footer{width:100%;box-sizing:border-box;flex-shrink:0;padding:18px 16px 22px;text-align:center;font:400 12px/1.6 Arial,Helvetica,sans-serif;color:#566477;background:#f8fafc;border-top:1px solid #e5eaf1;position:relative;z-index:2}
+.site-institutional-footer .institutional-name{font-weight:700;color:#173b31;font-size:13px}
+.site-institutional-footer .institutional-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:8px 0}
+.site-institutional-footer a{color:#176a53;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+.site-institutional-footer a:hover{color:#104935}
+.site-institutional-footer .institutional-cnpj{display:block}
+@media(max-width:450px){.site-institutional-footer{padding:14px 12px 18px;font-size:11px}.site-institutional-footer .institutional-links{gap:6px 12px}}
