@@ -7,3 +7,8 @@
 .site-institutional-footer a:hover{color:#104935}
 .site-institutional-footer .institutional-cnpj{display:block}
 @media(max-width:450px){.site-institutional-footer{padding:14px 12px 18px;font-size:11px}.site-institutional-footer .institutional-links{gap:6px 12px}}
+
+/* No quiz React o rodapé permanece no fluxo, após as etapas, sem cobrir botões. */
+body:has(> #root){min-height:100dvh;display:flex;flex-direction:column}
+body:has(> #root)>#root{flex:1 0 auto;min-width:0}
+body:has(> #root)>.quiz-institutional-footer{margin-top:auto;flex-shrink:0}
