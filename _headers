@@ -1,0 +1,31 @@
+# HTML should validate updates on each deployment
+/
+  Cache-Control: no-cache
+/pagina/
+  Cache-Control: no-cache
+/insulina/
+  Cache-Control: no-cache
+/insulina/premium/
+  Cache-Control: no-store
+/insulina/vsl.html
+  Cache-Control: public, max-age=600
+
+# Immutable versioned assets: fast repeat visits
+/pagina/js/*
+  Cache-Control: public, max-age=31536000, immutable
+/pagina/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/pagina/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/insulina/js/*
+  Cache-Control: public, max-age=31536000, immutable
+/insulina/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/insulina/images/*
+  Cache-Control: public, max-age=604800
+/js/presell.js
+  Cache-Control: public, max-age=300
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

@@ -1,0 +1,37 @@
+# Deploy the combined site on Netlify using the repository root.
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Premium code validation must run server-side.
+[[redirects]]
+  from = "/api/premium"
+  to = "/.netlify/functions/premium"
+  status = 200
+  force = true
+
+# Missing premium materials were not part of the reference capture.
+[[redirects]]
+  from = "/insulina/materiais/*"
+  to = "/insulina/materiais/indisponivel.html"
+  status = 200
+
+[[redirects]]
+  from = "/insulina/presentes/*"
+  to = "/insulina/materiais/indisponivel.html"
+  status = 200
+
+# Client-side routes of Clube do Segredo (basename=/insulina).
+[[redirects]]
+  from = "/insulina/*"
+  to = "/insulina/index.html"
+  status = 200
+
+# Keep the existing quiz path and the main presell at the root.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
